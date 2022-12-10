@@ -7,6 +7,7 @@ public class ColorList {
     public static Color[] colorCodes = new Color[177];
 
     public ColorList() {
+        // Read in the color codes in colorCodes.txt
         try {
             BufferedReader reader = new BufferedReader(new FileReader("assets/colorCodes.txt"));
             String line;

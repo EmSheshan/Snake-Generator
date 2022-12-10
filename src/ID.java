@@ -1,8 +1,8 @@
 import java.util.Random;
 
 public class ID {
-    public int addon,tongue,eye,belly,face,markings,colorBody,colorMarking;
-    public ID() {
+    public int addon,tongue,eye,belly,face,markings,colorBody,colorMarking; // the different parameters that are randomized for each snake.
+    public ID() {   // Generate a new randomized ID code
         Random rand = new Random();
         addon = rand.nextInt(32)+1;
         tongue = rand.nextInt(2)+1;

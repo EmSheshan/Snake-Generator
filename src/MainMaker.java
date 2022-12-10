@@ -3,13 +3,10 @@ import java.io.IOException;
 public class MainMaker {
 
     public static void main(String[] args) throws IOException {
-
-        MyCanvas m = new MyCanvas();
-
-        int numSnakes = 100;
-
+        MyCanvas canvas = new MyCanvas();
+        int numSnakes = 5;  // the number of snakes to be generated and saved to generatedImages.
         for (int i = 0; i < numSnakes; i++) {
-            m.createImage(new ID());
+            canvas.createImage(new ID());
         }
     }
 }
