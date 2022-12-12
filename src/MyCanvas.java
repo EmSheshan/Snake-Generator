@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class MyCanvas extends Canvas {
 
+    private final ColorList colorList = new ColorList();
     private final static int size = 150;    // determines the size of the generated image, set to 150 because of the size of the assets.
 
     public void createImage(ID id) throws IOException {
@@ -59,14 +60,14 @@ public class MyCanvas extends Canvas {
         }
     }
 
-    public static void applyColorFilter(BufferedImage image, int colorID) { // Colors an element based on the color ID.
+    public void applyColorFilter(BufferedImage image, int colorID) { // Colors an element based on the color ID.
         WritableRaster raster = image.getRaster();
         for (int x = 0; x < size; x++) {
             for (int y = 0; y < size; y++) {
                 int[] pixels = raster.getPixel(x, y, (int[]) null);
-                pixels[0] = ColorList.colorCodes[colorID].getRed();
-                pixels[1] = ColorList.colorCodes[colorID].getGreen();
-                pixels[2] = ColorList.colorCodes[colorID].getBlue();
+                pixels[0] = colorList.colorCodes[colorID].getRed();
+                pixels[1] = colorList.colorCodes[colorID].getGreen();
+                pixels[2] = colorList.colorCodes[colorID].getBlue();
                 raster.setPixel(x, y, pixels);
             }
         }

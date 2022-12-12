@@ -4,7 +4,7 @@ import java.awt.Color;
 
 public class ColorList {
 
-    public static Color[] colorCodes = new Color[177];
+    public Color[] colorCodes = new Color[177];
 
     public ColorList() {
         // Read in the color codes in colorCodes.txt
