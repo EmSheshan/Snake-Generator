@@ -12,5 +12,5 @@ public class ID {
         markings = rand.nextInt(6)+1;
         colorBody = rand.nextInt(177);
         colorMarking = rand.nextInt(177);
-    }
+    }   // fun fact: there's over 1.4 billion possible unique snake IDs.
 }
